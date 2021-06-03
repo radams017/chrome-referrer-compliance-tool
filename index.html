@@ -54,16 +54,22 @@
                 aria-describedby="basic-addon2">
         </div>
 
-        <h4 class="ml-3 mt-4">Referrer Parameters</h4>
-        <div id="referrer-buttons" class="input-group col-md-6">
-            <input type="text" class="form-control" placeholder="Parameter Goes Here" aria-label="Parameter Goes Here"
-                aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button id="add-ref-form" class="btn btn-outline-secondary" type="button">+</button>
+        <h4 class="ml-3 mt-4">Referrers</h4>
+        <div id="form-group">
+            <div id="referrer-buttons" class="input-group col-md-6">
+                <input type="text" class="form-control parameter-input" placeholder="Parameter Goes Here"
+                    aria-label="Parameter Goes Here" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button id="add-ref-form" class="btn btn-outline-secondary" type="button">+</button>
+                </div>
             </div>
         </div>
-        <button type="button" class="btn btn-outline-dark ml-3 mt-3">Submit</button>
-
+        <button id="gtm-btn" type="button" class="btn btn-outline-dark ml-3 mt-3">Submit</button>
+        <!-- <button id="gtm-copy" class="btn btn-outline-secondary ml-3 mt-3" type="button">Copy</button> -->
+        <div>
+            <pre><code id="gtm-output"></code></pre>
+            <!-- <input type="text" id="gtm-output"> -->
+        </div>
     </div>
 
     <div id="no-GTM" class="ml-3 mt-5">
@@ -78,6 +84,10 @@
                 aria-label="Tag Goes Here" aria-describedby="basic-addon2">
         </div>
         <button id="nonGTM-btn" type="button" class="btn btn-outline-dark ml-3 mt-3">Submit</button>
+        <!-- <button id="gtm-copy" class="btn btn-outline-secondary ml-3 mt-3" type="button">Copy</button> -->
+        <div>
+            <pre><code id="non-gtm-output"></code></pre>
+        </div>
     </div>
     </div>
 
