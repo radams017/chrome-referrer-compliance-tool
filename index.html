@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <title>Chrome Referrer Tag Compliance Tool</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navigation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#GTM">Using Google Tag Manager</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#no-GTM">Placing In HTML</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="home" class="text-center jumbotron bg-light border-bottom border-top">
+        <h1>Chrome Referrer Tag Compliance Tool</h1>
+        <p>This Tool Exists To Help You Adjust Your Tags To The New Chrome Tag Compliance Parameters.</p>
+    </div>
+
+    <div id="GTM" class="ml-3 mb-5">
+        <h1>Using Google Tag Manager</h1>
+        <p>When updating tags for GTM, it's necessary to hardcode a referrer if you are not using one-off tags.</p>
+        <p>GTM does not allow you to hardcode the referrer parameter into the tag script.</p>
+        <p>Input your tag code below, and then add any referrer parameters you require in the following input fields. If
+            multiple parameters, add with the '+' button.
+        </p>
+
+        <h4 class="ml-3 mt-4">Tag Script</h4>
+        <div class="input-group col-md-6">
+            <input id="gtm-tag" type="text" class="form-control" placeholder="Tag Goes Here" aria-label="Tag Goes Here"
+                aria-describedby="basic-addon2">
+        </div>
+
+        <h4 class="ml-3 mt-4">Referrer Parameters</h4>
+        <div id="referrer-buttons" class="input-group col-md-6">
+            <input type="text" class="form-control" placeholder="Parameter Goes Here" aria-label="Parameter Goes Here"
+                aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button id="add-ref-form" class="btn btn-outline-secondary" type="button">+</button>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-dark ml-3 mt-3">Submit</button>
+
+    </div>
+
+    <div id="no-GTM" class="ml-3 mt-5">
+        <h1>Placing In HTML</h1>
+        <p>When updating tags for placement in the HTML, it is only necessary to add the correct referrer parameter to
+            the tag script.</p>
+        <p>Place the tag code in the input field below, and then click submit.</p>
+
+        <h4 class="ml-3 mt-4">Tag Script</h4>
+        <div class="input-group col-md-6">
+            <input id="nogtm-tag" type="text" class="form-control" placeholder="Tag Goes Here"
+                aria-label="Tag Goes Here" aria-describedby="basic-addon2">
+        </div>
+        <button id="nonGTM-btn" type="button" class="btn btn-outline-dark ml-3 mt-3">Submit</button>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
