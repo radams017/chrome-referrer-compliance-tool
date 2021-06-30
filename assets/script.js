@@ -3,13 +3,11 @@ var gtmBtn = document.getElementById("gtm-btn");
 var newFormBtn = document.getElementById("add-ref-form");
 var formGroup = document.getElementById("form-group");
 var gtmCopy = document.getElementById("gtm-copy")
-var nonGTMCopy
 
 function insertReferrerPolicy(tag) {
     var policy = "referrerpolicy='no-referrer-when-downgrade'"
     return tag.replace(/(script async)/, `$1 ${policy}`)
   }
-
 // tracker tags look like
 // <script async src='https://tag.simpli.fi/sifitag/b7c57f80-178c-0137-e079-06a9ed4ca31b'></script>
 // so we're finding the part like `sifitag/b7c57f80-178c-0137-e079-06a9ed4ca31b` and replacing with
