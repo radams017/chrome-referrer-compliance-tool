@@ -14,6 +14,8 @@
 https://radams017.github.io/chrome-referrer-compliance-tool/
 
 ## Screenshot
+![App Screenshot](assets/img/app_1.png)
+
 
 ## License
 MIT
