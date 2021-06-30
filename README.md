@@ -13,3 +13,8 @@
 ## Deployed Application
 https://radams017.github.io/chrome-referrer-compliance-tool/
 
+## Screenshot
+
+## License
+MIT
+
