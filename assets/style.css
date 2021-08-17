@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 * {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Karla", sans-serif;
 }
 
 body {
@@ -10,4 +10,10 @@ body {
 
 html {
     scroll-behavior: smooth;
+}
+
+textarea {
+    width: 90%;
+
+    height: 200px;
 }

@@ -7,7 +7,7 @@ var gtmCopy = document.getElementById("gtm-copy")
 function insertReferrerPolicy(tag) {
     var policy = "referrerpolicy='no-referrer-when-downgrade'"
     return tag.replace(/(script async)/, `$1 ${policy}`)
-  }
+}
 // tracker tags look like
 // <script async src='https://tag.simpli.fi/sifitag/b7c57f80-178c-0137-e079-06a9ed4ca31b'></script>
 // so we're finding the part like `sifitag/b7c57f80-178c-0137-e079-06a9ed4ca31b` and replacing with
@@ -18,7 +18,7 @@ function insertReferrerPolicy(tag) {
 function insertRefererParameter(tag, ref) {
     var tagMatcher = /(sifitag\/[a-zA-Z0-9]{8}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{12})/
     return tag.replace(tagMatcher, `$1?referer=${ref}`)
-  }
+}
 
 function updateNonGTMTag() {
     var nonGTMTag = document.getElementById("nogtm-tag").value;
@@ -36,17 +36,18 @@ function referrers() {
     var params = [];
     for (var i = 0; i < inputs.length; i++) {
         params.push(inputs[i].value)
-    } return params;
+    }
+    return params;
 }
 
 function generateGTMTag(tag, ref) {
-    var output = insertRefererParameter(tag,encodeURIComponent(ref))
+    var output = insertRefererParameter(tag, encodeURIComponent(ref))
     var container = document.getElementById('gtm-output')
-    container.innerHTML += escapeTag(output) + '<br>';
+    container.innerHTML += escapeTag(output) + '&#13;&#10';
 }
 
 function escapeTag(str) {
-    return str.replace(/</,'&lt;').replace(/>/,'&gt;')
+    return str.replace(/</, '&lt;').replace(/>/, '&gt;')
 }
 
 function generateGTMTags() {
